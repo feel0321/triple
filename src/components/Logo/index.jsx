@@ -14,7 +14,6 @@ const Container = styled.div`
   background-size: ${({ inputWidth, inputHeight }) =>
     `${inputWidth} ${inputHeight}`};
   background-repeat: no-repeat;
-  border: 2px solid blue;
 `
 
 const Logo = ({ children, width, height }) => {

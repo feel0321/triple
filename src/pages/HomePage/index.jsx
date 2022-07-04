@@ -2,11 +2,13 @@ import styled from '@emotion/styled'
 
 import Award from '../../components/Award'
 import Logo from '../../components/Logo'
+import Text from '../../components/Text'
 import playStorePng from '../../assets/play-store2x.png'
 import appleStorePng from '../../assets/badge-apple4x.png'
 
 const SectionContainer = styled.div`
   min-width: 1200px;
+  height: 552px;
 `
 
 const ResponsiveSection = styled.div`
@@ -14,7 +16,6 @@ const ResponsiveSection = styled.div`
   width: 1040px;
   margin: 0 auto;
   position: relative;
-  border: 2px solid red;
 
   & .logo {
     position: absolute;
@@ -26,12 +27,19 @@ const ResponsiveSection = styled.div`
 const MetricsContainer = styled.div`
   margin-left: 623px;
   padding-top: 150px;
-  border: 2px solid green;
+`
+
+const MetricsItem = styled.div`
+  height: 36px;
+  color: rgb(58, 58, 58);
+  font-family: sans-serif;
+  font-size: 36px;
+  letter-spacing: -1px;
+  margin-bottom: 20px;
 `
 
 const AwardsContainer = styled.div`
   margin: 50px 0px 140px 623px;
-  border: 2px solid black;
   white-space: nowrap;
 `
 
@@ -43,9 +51,18 @@ const HomePage = () => {
           2012년 12월 기준
         </Logo>
         <MetricsContainer>
-          <div>700만 명의 여행자</div>
-          <div>100만 개의 여행 리뷰</div>
-          <div>470만 개의 여행 일정</div>
+          <MetricsItem>
+            <Text isStrong>700만 명</Text>
+            <Text>의 여행자</Text>
+          </MetricsItem>
+          <MetricsItem>
+            <Text isStrong>100만 개</Text>
+            <Text>의 여행 리뷰</Text>
+          </MetricsItem>
+          <MetricsItem>
+            <Text isStrong>470만 개</Text>
+            <Text>의 여행 일정</Text>
+          </MetricsItem>
         </MetricsContainer>
         <AwardsContainer>
           <Award url={playStorePng}>
