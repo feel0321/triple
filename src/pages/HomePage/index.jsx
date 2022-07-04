@@ -1,6 +1,9 @@
 import styled from '@emotion/styled'
 
+import Award from '../../components/Award'
 import Logo from '../../components/Logo'
+import playStorePng from '../../assets/play-store2x.png'
+import appleStorePng from '../../assets/badge-apple4x.png'
 
 const SectionContainer = styled.div`
   min-width: 1200px;
@@ -29,6 +32,7 @@ const MetricsContainer = styled.div`
 const AwardsContainer = styled.div`
   margin: 50px 0px 140px 623px;
   border: 2px solid black;
+  white-space: nowrap;
 `
 
 const HomePage = () => {
@@ -44,8 +48,16 @@ const HomePage = () => {
           <div>470만 개의 여행 일정</div>
         </MetricsContainer>
         <AwardsContainer>
-          <div>2018 구글 수상</div>
-          <div>2018 애플 수상</div>
+          <Award url={playStorePng}>
+            2018 구글 플레이스토어
+            <br />
+            올해의 앱 최우수상 수상
+          </Award>
+          <Award url={appleStorePng}>
+            2018 애플 앱스토어
+            <br />
+            오늘의 여행앱 선정
+          </Award>
         </AwardsContainer>
       </ResponsiveSection>
     </SectionContainer>
