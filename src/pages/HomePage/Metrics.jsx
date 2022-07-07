@@ -1,7 +1,7 @@
 import styled from '@emotion/styled'
 import PropTyeps from 'prop-types'
 
-import Text from '../../components/Text'
+import IntervalText from './IntervalText'
 
 const MetricsContainer = styled.div`
   margin-left: 623px;
@@ -49,16 +49,20 @@ const Metrics = ({ isInViewport }) => {
   return (
     <MetricsContainer className={isInViewport ? 'animation' : ''}>
       <MetricsItem>
-        <Text isStrong>700만 명</Text>
-        <Text>의 여행자</Text>
+        <IntervalText
+          defaultString="만 명"
+          targetCount={700}
+          isInViewport={isInViewport}
+        />
+        <span>의 여행자</span>
       </MetricsItem>
       <MetricsItem>
-        <Text isStrong>100만 개</Text>
-        <Text>의 여행 리뷰</Text>
+        <IntervalText targetCount={100} isInViewport={isInViewport} />
+        <span>의 여행 리뷰</span>
       </MetricsItem>
       <MetricsItem>
-        <Text isStrong>470만 개</Text>
-        <Text>의 여행 일정</Text>
+        <IntervalText targetCount={470} isInViewport={isInViewport} />
+        <span>의 여행 일정</span>
       </MetricsItem>
     </MetricsContainer>
   )
