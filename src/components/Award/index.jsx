@@ -15,11 +15,43 @@ const Container = styled.div`
   font-size: 14px;
   line-height: 22px;
   margin-right: 39px;
+
+  &.animation {
+    animation-fill-mode: forwards;
+    animation-name: init, upAndMakeVisible;
+    animation-delay: 0s, 500ms;
+    animation-duration: 500ms, 700ms;
+    animation-timing-function: linear, ease-in-out;
+
+    @keyframes init {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 0;
+      }
+    }
+
+    @keyframes upAndMakeVisible {
+      from {
+        transform: translate(0, 25px);
+        opacity: 0;
+      }
+      to {
+        transform: translate(0, 0);
+        opacity: 1;
+      }
+    }
+  }
 `
 
-const Award = ({ children, size, url }) => {
+const Award = ({ children, size, url, isInViewport }) => {
   return (
-    <Container size={size} url={url}>
+    <Container
+      size={size}
+      url={url}
+      className={isInViewport ? `animation` : ''}
+    >
       {children}
     </Container>
   )
@@ -29,10 +61,12 @@ Award.propTypes = {
   children: PropTypes.node.isRequired,
   size: PropTypes.string,
   url: PropTypes.string.isRequired,
+  isInViewport: PropTypes.bool,
 }
 
 Award.defaultProps = {
   size: '54px',
+  isInViewport: false,
 }
 
 export default Award

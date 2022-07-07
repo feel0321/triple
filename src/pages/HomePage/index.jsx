@@ -58,7 +58,7 @@ const HomePage = () => {
   return (
     <SectionContainer ref={ref}>
       <ResponsiveSection>
-        <Logo width="400px" height="338px">
+        <Logo width="400px" height="338px" isInViewport={isInViewport}>
           2012년 12월 기준
         </Logo>
         <MetricsContainer>
@@ -76,12 +76,12 @@ const HomePage = () => {
           </MetricsItem>
         </MetricsContainer>
         <AwardsContainer>
-          <Award url={playStorePng}>
+          <Award url={playStorePng} isInViewport={isInViewport}>
             2018 구글 플레이스토어
             <br />
             올해의 앱 최우수상 수상
           </Award>
-          <Award url={appleStorePng}>
+          <Award url={appleStorePng} isInViewport={isInViewport}>
             2018 애플 앱스토어
             <br />
             오늘의 여행앱 선정
