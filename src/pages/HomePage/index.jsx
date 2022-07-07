@@ -1,5 +1,5 @@
 import styled from '@emotion/styled'
-import { useEffect, useRef } from 'react'
+import { useRef } from 'react'
 
 import Award from '../../components/Award'
 import Logo from '../../components/Logo'
@@ -36,17 +36,11 @@ const HomePage = () => {
   const ref = useRef()
   const isInViewport = useObserver(ref)
 
-  useEffect(() => {
-    if (isInViewport) {
-      console.log('들어왔다!')
-    }
-  }, [isInViewport])
-
   return (
     <SectionContainer ref={ref}>
       <ResponsiveSection>
         <Logo width="400px" height="338px" isInViewport={isInViewport}>
-          2012년 12월 기준
+          2021년 12월 기준
         </Logo>
         <Metrics isInViewport={isInViewport} />
         <AwardsContainer>
