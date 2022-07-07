@@ -10,6 +10,19 @@ npm 8.11.0
 1. `npm i` 명령어로 의존성 라이브러리를 설치해주세요
 2. `npm start` 또는 `npm run start` 명령어로 시작합니다
 
+### HomePage
+
+![Jul-07-2022 19-22-33](https://user-images.githubusercontent.com/50919342/177751937-e5b43d8c-4e46-471b-b666-f94082c61c45.gif)
+
+과제의 요구사항을 구현했습니다
+
+### TestPage
+
+![Jul-07-2022 19-22-03](https://user-images.githubusercontent.com/50919342/177752084-8b2b9881-cd3c-4bac-b569-f80b7d9e5047.gif)
+
+HomePage 코드를 복사해서 margin-top만 추가했습니다
+스크롤을 내려서 확인할 수 있습니다
+
 ## 사용한 기술과 이유
 
 1. Javascript
