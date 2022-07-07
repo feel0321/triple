@@ -1,5 +1,6 @@
 import styled from '@emotion/styled'
 import { useRef } from 'react'
+import { Link } from 'react-router-dom'
 
 import Award from '../../components/Award'
 import Logo from '../../components/Logo'
@@ -56,6 +57,9 @@ const HomePage = () => {
           </Award>
         </AwardsContainer>
       </ResponsiveSection>
+      <Link to="/test" style={{ textAlign: 'center', display: 'block' }}>
+        TestPage로 이동
+      </Link>
     </SectionContainer>
   )
 }
