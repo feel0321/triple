@@ -1,10 +1,12 @@
 import styled from '@emotion/styled'
+import { useEffect, useRef } from 'react'
 
 import Award from '../../components/Award'
 import Logo from '../../components/Logo'
 import Text from '../../components/Text'
 import playStorePng from '../../assets/play-store2x.png'
 import appleStorePng from '../../assets/badge-apple4x.png'
+import useObserver from '../../hooks/useObserver'
 
 const SectionContainer = styled.div`
   min-width: 1200px;
@@ -44,8 +46,17 @@ const AwardsContainer = styled.div`
 `
 
 const HomePage = () => {
+  const ref = useRef()
+  const isInViewport = useObserver(ref)
+
+  useEffect(() => {
+    if (isInViewport) {
+      console.log('들어왔다!')
+    }
+  }, [isInViewport])
+
   return (
-    <SectionContainer>
+    <SectionContainer ref={ref}>
       <ResponsiveSection>
         <Logo width="400px" height="338px">
           2012년 12월 기준
