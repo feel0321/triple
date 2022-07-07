@@ -3,10 +3,11 @@ import { useEffect, useRef } from 'react'
 
 import Award from '../../components/Award'
 import Logo from '../../components/Logo'
-import Text from '../../components/Text'
 import playStorePng from '../../assets/play-store2x.png'
 import appleStorePng from '../../assets/badge-apple4x.png'
 import useObserver from '../../hooks/useObserver'
+
+import Metrics from './Metrics'
 
 const SectionContainer = styled.div`
   min-width: 1200px;
@@ -24,20 +25,6 @@ const ResponsiveSection = styled.div`
     top: 150px;
     padding-top: 280px;
   }
-`
-
-const MetricsContainer = styled.div`
-  margin-left: 623px;
-  padding-top: 150px;
-`
-
-const MetricsItem = styled.div`
-  height: 36px;
-  color: rgb(58, 58, 58);
-  font-family: sans-serif;
-  font-size: 36px;
-  letter-spacing: -1px;
-  margin-bottom: 20px;
 `
 
 const AwardsContainer = styled.div`
@@ -61,20 +48,7 @@ const HomePage = () => {
         <Logo width="400px" height="338px" isInViewport={isInViewport}>
           2012년 12월 기준
         </Logo>
-        <MetricsContainer>
-          <MetricsItem>
-            <Text isStrong>700만 명</Text>
-            <Text>의 여행자</Text>
-          </MetricsItem>
-          <MetricsItem>
-            <Text isStrong>100만 개</Text>
-            <Text>의 여행 리뷰</Text>
-          </MetricsItem>
-          <MetricsItem>
-            <Text isStrong>470만 개</Text>
-            <Text>의 여행 일정</Text>
-          </MetricsItem>
-        </MetricsContainer>
+        <Metrics isInViewport={isInViewport} />
         <AwardsContainer>
           <Award url={playStorePng} isInViewport={isInViewport}>
             2018 구글 플레이스토어
