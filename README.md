@@ -66,11 +66,7 @@ Metrics쪽은 다른곳에서 사용되지 않을것 같아서 page에 두었습
 
 ## 상태
 
-HomePage (isInViewport)
-|
-Metrics | Logo | Award
-|
-IntervalText (isInViewport)
+![스크린샷 2022-07-07 오후 11 15 14](https://user-images.githubusercontent.com/50919342/177795531-5126063a-e62e-48d2-b730-c634c889ecde.png)
 
 HomePage/index.jsx에서 useObserver.js를 통해 과제로 구현한 부분을 사용자가 보고 있는지 유무를 isInViewport라는 state로 가지고 있습니다
 이 값을 Metrics, Logo, Award로 넘겨서 애니메이션을 동작 유무를 결정합니다
