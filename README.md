@@ -1,4 +1,4 @@
-# Tripple Frontend Homework 3 - 고광필
+# Triple Frontend Homework 3 - 고광필
 
 ## 개발 환경
 
@@ -29,7 +29,7 @@ HomePage 코드를 복사해서 margin-top만 추가했습니다
 
    > TypeScript를 사용합니다. 처음 보는 코드의 적응을 돕고, 잘못 참조하거나 맞지 않는 타입의 변수를 할당하는 등의 실수를 막아줍니다.
 
-   [Tripple Javascript Guide](https://github.com/titicacadev/eslint-config-triple/blob/main/STYLE_GUIDE.md)에서 해당 내용을 보았지만,
+   [Triple Javascript Guide](https://github.com/titicacadev/eslint-config-triple/blob/main/STYLE_GUIDE.md)에서 해당 내용을 보았지만,
    채용 과제 요구사항에 React 외 개발 스택은 자유롭게 구성하라고 써있어서 제게 좀 더 익숙하다고 생각되는 Javascript로 개발했습니다
 
 2. prop-types
@@ -40,14 +40,14 @@ HomePage 코드를 복사해서 margin-top만 추가했습니다
 
 3. styled-component (@emotion/styled)
 
-   [Tripple 사이트](https://triple.guide/)의 html class에 `section__ResponsiveSection`과 같이 BEM 방법론을 도입한듯한 class를 확인했습니다
+   [Triple 사이트](https://triple.guide/)의 html class에 `section__ResponsiveSection`과 같이 BEM 방법론을 도입한듯한 class를 확인했습니다
    하지만 제가 아직 BEM 방법론에 대한 이해가 부족한 점, class 네이밍에도 신경써야 하는 점, css 파일을 따로 관리해야 하는 점이 불편하다고 생각해서 styled-component를 사용했습니다
 
 4. IntersectionObserver API
 
    사용자의 화면에 DOM요소가 잡혔을 때 애니메이션 효과를 발생시킬 수 있도록 하기 위해서 사용했습니다
 
-5. eslint-config-tripple
+5. eslint-config-triple
 
    린팅 / 포매팅 셋업했습니다
 

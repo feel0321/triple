@@ -1,5 +1,5 @@
 {
-  "name": "tripple",
+  "name": "triple",
   "version": "0.1.0",
   "prettier": "@titicaca/eslint-config-triple/prettierrc",
   "private": true,
